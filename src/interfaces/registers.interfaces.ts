@@ -5,3 +5,4 @@ export interface IRegisters {
     type: string;
     payment: string;
 }
+
