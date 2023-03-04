@@ -28,5 +28,10 @@ export async function loginService({ email, password }) {
         process.env.SECRET_KEY,
         { expiresIn: "24h", subject: user.id })
 
-    return token
+    const userData = {
+        userName: user.username,
+        email: user.email,
+    }
+
+    return { token, userData }
 }

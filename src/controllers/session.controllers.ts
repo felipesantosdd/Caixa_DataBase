@@ -4,9 +4,9 @@ import { loginService } from "../services/login.service";
 export async function loginController(req: Request, res: Response) {
     try {
         const loginData = req.body
-        const token = await loginService(loginData)
+        const data = await loginService(loginData)
 
-        return res.status(200).json({ token })
+        return res.status(200).json({ data })
 
     } catch (error) {
         console.error(error)
